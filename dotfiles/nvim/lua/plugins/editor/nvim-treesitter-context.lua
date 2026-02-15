@@ -1,0 +1,19 @@
+local M = {}
+
+function M.setup()
+  require("treesitter-context").setup({
+    enable = true,
+    multiwindow = false,
+    max_lines = 3,
+    min_window_height = 0,
+    line_numbers = true,
+    multiline_threshold = 20,
+    trim_scope = 'outer',
+    mode = 'cursor',
+    separator = nil,
+    zindex = 20,
+    on_attach = nil,
+  })
+end
+
+return M
